@@ -1,0 +1,16 @@
+{
+  "name": "fm-accordioncard",
+  "version": "1.0.0",
+  "description": "Frontend Mentor - accordion card coding challeng",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^4.4.4"
+  }
+}
