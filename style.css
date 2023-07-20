@@ -4,7 +4,7 @@
   font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("./assets/fontskumbh-sans-v20-latin-regular.woff2") format("woff2");
+  src: url("./assets/fonts/kumbh-sans-v20-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -12,7 +12,7 @@
   font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("./assets/fontskumbh-sans-v20-latin-700.woff2") format("woff2");
+  src: url("./assets/fonts/kumbh-sans-v20-latin-700.woff2") format("woff2");
 }
 
 /* Custom Properties */
@@ -24,6 +24,8 @@
   --clr-neutral-100: hsl(237, 12%, 33%);
   --clr-neutral-200: hsl(240, 6%, 59%);
   --clr-neutral-300: hsl(240, 5%, 91%);
+
+  --white: hsl(0, 0%, 100%);
 
   --clr-gradient: linear-gradient(
     to bottom,
@@ -37,7 +39,7 @@
   --fw-bold: 700;
 
   --fs-400: 0.75rem;
-  --fs-500: 1rem;
+  --fs-500: 0.9375rem;
   --fs-700: 2rem;
 }
 
@@ -81,12 +83,75 @@ select {
 body {
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
-  font-size: var(--fs-400);
   background: var(--clr-gradient);
-  background-repeat: no-repeat;
 
   display: grid;
   place-content: center;
+}
+
+.faq {
+  width: 900px;
+  background: var(--white);
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.faq__section {
+  display: grid;
+  gap: 2rem;
+  margin: 4rem 7rem 4rem 0;
+}
+
+.faq__title abbr {
+  text-decoration: none;
+}
+
+.faq__content {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq__content button {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-size: var(--fs-500);
+  border: none;
+  border-bottom: 1px solid var(--clr-neutral-300);
+  padding: 0 0 1rem 0;
+  background: transparent;
+}
+
+.faq__content button[aria-expanded="true"] {
+  font-weight: var(--fw-bold);
+  border: none;
+  padding: 0 0 0.5rem 0;
+}
+
+.faq__content button::after {
+  position: absolute;
+  right: 0;
+  content: url("./assets/imgs/icon-arrow-down.svg");
+}
+
+.faq__content button[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.faq__content button:hover,
+.faq__content button:focus {
+  color: var(--clr-primary-red);
+  cursor: pointer;
+  outline: none;
+}
+
+.faq__desc {
+  display: none;
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-200);
+  padding: 0 1rem 1rem 0;
+  border-bottom: 1px solid var(--clr-neutral-300);
 }
 
 /* Attribution */
