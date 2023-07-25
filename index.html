@@ -27,8 +27,27 @@
     <title>Frontend Mentor. FAQ Accordion Card</title>
   </head>
   <body>
-    <main class="faq">
-      <div class="faq__logo"></div>
+    <main class="accordion">
+      <div class="logo">
+        <div class="logo__container">
+          <picture class="logo__main">
+            <source
+              srcset="./assets/imgs/illustration-woman-online-mobile.svg"
+              media="(max-width: 900px)"
+            />
+            <img
+              src="./assets/imgs/illustration-woman-online-desktop.svg"
+              alt=""
+            />
+          </picture>
+        </div>
+        <img
+          src="assets/imgs/illustration-box-desktop.svg"
+          alt=""
+          class="box"
+        />
+      </div>
+
       <div class="faq__section">
         <h1 class="faq__title">
           <abbr title="Frequently Asked Questions">FAQ</abbr>s

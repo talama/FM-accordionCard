@@ -84,23 +84,49 @@ body {
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
   background: var(--clr-gradient);
-
-  display: grid;
-  place-content: center;
 }
 
-.faq {
-  width: 900px;
+.accordion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  max-width: 900px;
+  width: 90%;
   background: var(--white);
   border-radius: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
+.logo {
+  align-self: center;
+  width: max-content;
+  position: relative;
+}
+
+.logo__container {
+  overflow: hidden;
+}
+
+.logo__main {
+  background: url("./assets/imgs/bg-pattern-desktop.svg") no-repeat center
+    bottom / contain;
+  margin-left: -65px;
+  padding-bottom: 60px;
+}
+
+.box {
+  position: absolute;
+  top: 28%;
+  left: -90px;
+}
+
 .faq__section {
   display: grid;
-  gap: 2rem;
-  margin: 4rem 7rem 4rem 0;
+  gap: 1.5rem;
+  margin: 3rem 7rem 4rem 0;
 }
 
 .faq__title abbr {
