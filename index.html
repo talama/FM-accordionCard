@@ -30,10 +30,15 @@
     <main class="accordion">
       <div class="logo">
         <div class="logo__container">
+          <img
+            src="assets/imgs/illustration-box-desktop.svg"
+            alt=""
+            class="box"
+          />
           <picture class="logo__main">
             <source
               srcset="./assets/imgs/illustration-woman-online-mobile.svg"
-              media="(max-width: 900px)"
+              media="(max-width: 1000px)"
             />
             <img
               src="./assets/imgs/illustration-woman-online-desktop.svg"
@@ -41,17 +46,13 @@
             />
           </picture>
         </div>
-        <img
-          src="assets/imgs/illustration-box-desktop.svg"
-          alt=""
-          class="box"
-        />
       </div>
 
       <div class="faq__section">
         <h1 class="faq__title">
           <abbr title="Frequently Asked Questions">FAQ</abbr>s
         </h1>
+
         <dl class="faq__content">
           <div class="faq__item">
             <dt>
@@ -70,11 +71,12 @@
               </div>
             </dd>
           </div>
+
           <div class="faq__item">
             <dt>
               <button
                 type="button"
-                aria-expanded="false"
+                aria-expanded="true"
                 aria-controls="faq__desc--2"
               >
                 What is the maximum file upload size?

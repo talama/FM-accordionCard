@@ -98,11 +98,12 @@ body {
   border-radius: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background: url("./assets/imgs/bg-pattern-desktop.svg"), white;
+  background-repeat: no-repeat;
+  background-position: -40rem -17rem;
 }
 
 .logo {
-  align-self: center;
-  width: max-content;
   position: relative;
 }
 
@@ -111,16 +112,14 @@ body {
 }
 
 .logo__main {
-  background: url("./assets/imgs/bg-pattern-desktop.svg") no-repeat center
-    bottom / contain;
-  margin-left: -65px;
-  padding-bottom: 60px;
+  margin-top: 4rem;
+  margin-left: -5rem;
 }
 
 .box {
   position: absolute;
-  top: 28%;
-  left: -90px;
+  top: 11rem;
+  left: -5.625rem;
 }
 
 .faq__section {
