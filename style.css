@@ -80,6 +80,8 @@ select {
   font: inherit;
 }
 
+/* General Settings */
+
 body {
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
@@ -103,6 +105,8 @@ body {
   background-position: -40rem -17rem;
 }
 
+/* Left side */
+
 .logo {
   position: relative;
 }
@@ -122,6 +126,7 @@ body {
   left: -5.625rem;
 }
 
+/* Right side */
 .faq__section {
   display: grid;
   gap: 1.5rem;
@@ -174,7 +179,6 @@ body {
 .faq__desc-wrapper {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s ease-out;
 }
 
 .faq__desc {
@@ -202,4 +206,32 @@ body {
 .attribution a {
   text-decoration: none;
   color: hsl(228, 45%, 44%);
+}
+
+/* Animation and Transitions */
+@keyframes cubeAnimation {
+  0% {
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+    transform: translateY(0);
+  }
+
+  50% {
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.1));
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .box {
+    animation: cubeAnimation 2s infinite;
+  }
+
+  .faq__desc-wrapper {
+    transition: grid-template-rows 0.5s ease-out;
+  }
 }

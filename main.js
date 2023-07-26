@@ -16,7 +16,6 @@ window.addEventListener("load", () => {
 function setUp(btn) {
   btn.addEventListener("click", () => {
     const content = document.getElementById(btn.getAttribute("aria-controls"));
-    console.log(parent);
     if (btn.getAttribute("aria-expanded") === "false") {
       content.style.gridTemplateRows = "1fr";
       btn.setAttribute("aria-expanded", "true");
