@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
       const content = document.getElementById(
         btn.getAttribute("aria-controls")
       );
-      content.style.display = "block";
+      content.style.gridTemplateRows = "1fr";
     }
     setUp(btn);
   });
@@ -16,11 +16,12 @@ window.addEventListener("load", () => {
 function setUp(btn) {
   btn.addEventListener("click", () => {
     const content = document.getElementById(btn.getAttribute("aria-controls"));
+    console.log(parent);
     if (btn.getAttribute("aria-expanded") === "false") {
-      content.style.display = "block";
+      content.style.gridTemplateRows = "1fr";
       btn.setAttribute("aria-expanded", "true");
     } else {
-      content.style.display = "none";
+      content.style.gridTemplateRows = "0fr";
       btn.setAttribute("aria-expanded", false);
     }
   });

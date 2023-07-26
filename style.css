@@ -171,10 +171,19 @@ body {
   outline: none;
 }
 
+.faq__desc-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease-out;
+}
+
 .faq__desc {
-  display: none;
+  overflow: hidden;
   font-size: var(--fs-400);
   color: var(--clr-neutral-200);
+}
+
+.faq__desc p {
   padding: 0 1rem 1rem 0;
   border-bottom: 1px solid var(--clr-neutral-300);
 }
