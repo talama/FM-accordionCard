@@ -80,6 +80,8 @@ select {
   font: inherit;
 }
 
+/* General Settings */
+
 body {
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
@@ -98,11 +100,14 @@ body {
   border-radius: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background: url("./assets/imgs/bg-pattern-desktop.svg"), white;
+  background-repeat: no-repeat;
+  background-position: -40rem -17rem;
 }
 
+/* Left side */
+
 .logo {
-  align-self: center;
-  width: max-content;
   position: relative;
 }
 
@@ -111,18 +116,17 @@ body {
 }
 
 .logo__main {
-  background: url("./assets/imgs/bg-pattern-desktop.svg") no-repeat center
-    bottom / contain;
-  margin-left: -65px;
-  padding-bottom: 60px;
+  margin-top: 4rem;
+  margin-left: -5rem;
 }
 
 .box {
   position: absolute;
-  top: 28%;
-  left: -90px;
+  top: 11rem;
+  left: -5.625rem;
 }
 
+/* Right side */
 .faq__section {
   display: grid;
   gap: 1.5rem;
@@ -172,10 +176,18 @@ body {
   outline: none;
 }
 
+.faq__desc-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+}
+
 .faq__desc {
-  display: none;
+  overflow: hidden;
   font-size: var(--fs-400);
   color: var(--clr-neutral-200);
+}
+
+.faq__desc p {
   padding: 0 1rem 1rem 0;
   border-bottom: 1px solid var(--clr-neutral-300);
 }
@@ -194,4 +206,32 @@ body {
 .attribution a {
   text-decoration: none;
   color: hsl(228, 45%, 44%);
+}
+
+/* Animation and Transitions */
+@keyframes cubeAnimation {
+  0% {
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+    transform: translateY(0);
+  }
+
+  50% {
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.1));
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .box {
+    animation: cubeAnimation 2s infinite;
+  }
+
+  .faq__desc-wrapper {
+    transition: grid-template-rows 0.5s ease-out;
+  }
 }

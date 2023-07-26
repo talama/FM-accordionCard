@@ -2,18 +2,25 @@ window.addEventListener("load", () => {
   const buttons = document.querySelectorAll(
     "button[aria-expanded][aria-controls]"
   );
-  buttons.forEach((btn) => setUp(btn));
+  buttons.forEach((btn) => {
+    if (btn.getAttribute("aria-expanded") === "true") {
+      const content = document.getElementById(
+        btn.getAttribute("aria-controls")
+      );
+      content.style.gridTemplateRows = "1fr";
+    }
+    setUp(btn);
+  });
 });
 
 function setUp(btn) {
   btn.addEventListener("click", () => {
-    const btnId = btn.getAttribute("aria-controls");
-    const content = document.getElementById(btnId);
+    const content = document.getElementById(btn.getAttribute("aria-controls"));
     if (btn.getAttribute("aria-expanded") === "false") {
-      content.style.display = "block";
+      content.style.gridTemplateRows = "1fr";
       btn.setAttribute("aria-expanded", "true");
     } else {
-      content.style.display = "none";
+      content.style.gridTemplateRows = "0fr";
       btn.setAttribute("aria-expanded", false);
     }
   });
