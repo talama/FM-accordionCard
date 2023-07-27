@@ -235,3 +235,48 @@ body {
     transition: grid-template-rows 0.5s ease-out;
   }
 }
+
+/* Mobile version media queries */
+
+@media only screen and (max-width: 1000px) {
+  .accordion {
+    top: 10rem;
+    transform: translate(-50%, 0);
+    width: 375px;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr;
+    background: url("./assets/imgs/bg-pattern-mobile.svg"), white;
+    background-repeat: no-repeat;
+    background-position: 50% 10px;
+    background-size: 300px;
+  }
+
+  .logo__container {
+    overflow: visible;
+  }
+
+  .logo__main {
+    margin: -140px auto;
+    width: 300px;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .faq__section {
+    margin: 0 auto;
+    margin: 0 auto;
+    padding: 15px 20px;
+    justify-items: center;
+  }
+
+  .faq__content {
+    margin-bottom: 30px;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
