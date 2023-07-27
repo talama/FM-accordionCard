@@ -15,7 +15,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Github pages](https://github.com/talama/FM-accordionCard)
+- Live Site URL: [Github pages](https://talama.github.io/FM-accordionCard/)
 
 ## Author
 
